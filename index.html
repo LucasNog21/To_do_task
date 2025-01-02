@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="container">
+    <header id="header">
+        <div id="cheader">
+            <h1 id="title">To do task</h1>
+        </div>
+    </header>
+    <main id="main">
+        <div id="tasks">
+
+        </div>
+        <div id="preview_area">
+            <div id="buttons">
+                <input type="button" value="Adicionar tarefa" class="task_button" onclick="preview_task()">
+                <input type="button" value="Mostrar tarefas" class="task_button" onclick="show_task()">
+                <input type="button" value="Remover tarefas concluídas" class="task_button">
+            </div>
+            <div id="input_task">
+                <div id="add_input">
+
+                </div>
+                <div id="add_button">
+                    <input type="button" value="Adicionar" class="task_button" id="add_task_button"
+                        onclick="add_task()">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>&copy; Direitos reservados a LN</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

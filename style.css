@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color:black;
+}
+
+#title {
+    margin: auto auto;
+}
+#cheader {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    width: fit-content;
+}
+
+header {
+    height: auto;
+    border: gray;
+    background-color:white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 3px 10px -5px gray;
+
+}
+
+main {
+    display: grid;
+    grid-template-rows: 18rem 1fr;
+    grid-template-columns: 1fr ;
+    grid-template-areas: 
+        'tasks-area'
+        'preview-area';
+    height: 100%;
+    width: 100%;
+}
+
+div#tasks {
+    grid-area: tasks-area;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 10px -5px gray;
+    padding:1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap:1rem;
+}
+
+#preview_area {
+    display: flex;
+    flex-direction: row;
+    background-color:rgba(234, 234, 234, 0.432);
+    gap: 1rem;
+    padding: 1rem;
+}
+div#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 20rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px -5px gray;
+    padding: 3rem;
+    gap: 3rem
+
+}
+
+.task_button{
+    font-size: 1rem;
+    background-color: #100f28;
+    color: white;
+    border-radius: 2rem;
+    width: auto;
+    height: 3rem;
+    padding:1rem;
+    border: none;
+    box-shadow: 0px 3px 10px -5px gray;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+.task_button:hover {
+    background-color: gray;
+    transform: scale(1.03)
+}
+
+#add_task_button {
+    display: none;
+}
+
+#input_task {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    width: auto;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px -5px gray;
+    padding: 1rem;
+    gap:1rem
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    min-width: 50%;
+    width: auto;
+    box-shadow: 0px 5px 15px -5px gray;
+    background-color:rgba(234, 234, 234, 0.432);
+    gap:1rem;
+    padding:1rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 10rem;
+    resize: none;
+    overflow: hidden;
+
+}
+
+#card_func {
+    color: black;
+    text-decoration: none;
+}
+
+#add_task_button {
+    margin-bottom: 1rem;
+}
+footer {
+    display: flex;
+    height: auto;
+    background-color: #100f28;
+    width:100%;
+    justify-content: center;
+    color: white;
+}
