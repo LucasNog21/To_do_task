@@ -39,21 +39,24 @@ function show_task() {
     for (var i = 0; i < tasks_array.length;i++){
         tasks.innerHTML += `
     <div class="card" id="${tasks_array[i].name}">
-        <h1>${tasks_array[i].name}</h1><a href="#" id="${i}" onclick="show_desc(${i})">mostrar descrição</a>
-        <p id="p_desc${i}"></p> 
+        <h1>${tasks_array[i].name}</h1><a href="#" id="${i}" onclick="show_hide_desc(${i})">mostrar descrição</a>
+        <p id="p_desc${i}" class="desc">${tasks_array[i].desc}</p> 
     </div>
     `
     }
     
 }
 
-function show_desc(id) {
-    let p_desc = document.querySelector(`p#p_desc${id}`)
-    let show_desc = document.querySelector(`a#${id}`)
-    p_desc.innerHTML = `<br><p>${tasks_array[id].desc}</p>`
-    show_desc.innerHTML = `<a href="#" id="${id}" onclick="show_desc(${id})">ocultar descrição</a>`
+function show_hide_desc(id) {
+    let desc_text = document.querySelector(`p#p_desc${id}`)
+        if(desc_text.style.display == 'none'){
+            desc_text.style.display = 'inline'
+        } else {
+            desc_text.style.display = 'none'
+        }
 
 }
+
 function Task(name, desc, complete ) {
     this.name = name,
     this.desc = desc,

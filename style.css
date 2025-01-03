@@ -141,6 +141,10 @@ textarea {
 #add_task_button {
     margin-bottom: 1rem;
 }
+
+.desc {
+    display:none;
+}
 footer {
     display: flex;
     height: auto;
