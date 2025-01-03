@@ -97,6 +97,21 @@ div#buttons {
     transform: scale(1.03)
 }
 
+.delete_button {
+    font-size: 1rem;
+    background-color: white;
+    color: red;
+    border-radius: 1rem;
+    width: auto ;
+    height: 25px;
+    border-color: red;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.delete_button:hover {
+    transform: scale(1.03)
+}
 #add_task_button {
     display: none;
 }
@@ -125,6 +140,12 @@ div#buttons {
     padding:1rem;
 }
 
+#card_info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
 textarea {
     width: 100%;
     min-height: 10rem;
