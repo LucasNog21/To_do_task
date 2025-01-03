@@ -64,17 +64,7 @@ function show_hide_desc(id) {
 
 }
 
-/*
-function delete_complete_task() {
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]')
-    for (let i in checkboxes) {
-        let checkbox = checkboxes[i]
-        if (checkbox.checked){
-            delete_task(i)
-        }
-    }
-}
-*/
+
 function delete_complete_task() {
     let checkboxes = document.querySelectorAll('input[type="checkbox"]')
     for (let i in checkboxes) {

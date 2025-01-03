@@ -146,6 +146,7 @@ div#buttons {
     gap: 1rem;
     align-items: center;
 }
+
 textarea {
     width: 100%;
     min-height: 10rem;
@@ -154,18 +155,10 @@ textarea {
 
 }
 
-#card_func {
-    color: black;
-    text-decoration: none;
-}
-
-#add_task_button {
-    margin-bottom: 1rem;
-}
-
 .desc {
     display:none;
 }
+
 footer {
     display: flex;
     height: auto;
