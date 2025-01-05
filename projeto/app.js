@@ -75,7 +75,9 @@ function add_task() {
 }
 
 function show_task() {
-    hide_button.style.display = 'inline'
+    if (tasks.length !=0){
+        hide_button.style.display = 'inline'
+    }
     task_area.innerHTML = ''
 
     for (i in tasks){
@@ -133,6 +135,7 @@ function delete_task(id) {
     if (task_area.innerHTML == ''){
         hide_task()
     }
+    save_tasks()
 }
 
 
