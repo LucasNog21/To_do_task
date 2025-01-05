@@ -119,12 +119,18 @@ div#buttons {
     background-color: rgb(45, 45, 55);
     border: 1px solid rgb(175, 175, 175);
     border-radius: 1rem;
+    min-width: auto;
     width: 70%;
     gap:1rem;
     padding:1rem;
 }
 
-#card_info {
+.card_title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.card_info {
     display: flex;
     flex-direction: row;
     gap: 1rem;
