@@ -27,8 +27,8 @@ main {
     grid-template-areas: 
         'tasks-area'
         'preview-area';
-    height: 100%;
     width: 100%;
+    height:100%;
     background-color: rgb(45, 45, 55);
 }
 
@@ -40,8 +40,12 @@ div#tasks {
     overflow-x: auto;
     white-space: nowrap;
     gap:1rem;
+}
+
+div#tasks_area {
     position: relative;
 }
+
 
 #preview_area {
     grid-area: preview-area;
@@ -89,8 +93,7 @@ div#buttons {
     border-radius: 1rem;
     width: 4rem ;
     height: 25px;
-    border: none;
-    border-color: red;
+    border: 2px solid red;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -116,6 +119,7 @@ div#buttons {
     background-color: rgb(45, 45, 55);
     border: 1px solid rgb(175, 175, 175);
     border-radius: 1rem;
+    width: 70%;
     gap:1rem;
     padding:1rem;
 }
@@ -125,7 +129,6 @@ div#buttons {
     flex-direction: row;
     gap: 1rem;
     align-items: center;
-    width: auto;
 }
 
 textarea {
@@ -150,7 +153,7 @@ textarea {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    width: 3rem;
+    width: 4rem;
     height: 2rem;
     background-color: #184bf5;
     border: none;

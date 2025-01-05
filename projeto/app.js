@@ -45,8 +45,45 @@ function add_task() {
     
 }
 
+function show_task() {
+    hide_button.style.display = 'inline'
+    task_area.innerHTML = ''
+
+    for (i in tasks){
+        let card = document.createElement('div')
+        let card_info = document.createElement('div')
+
+        card.id = tasks[i].title
+        card.classList.add('card')
+        card_info.innerHTML = `
+        <p>
+        <h1>${tasks[i].title}</h1>
+        <a href ="#" id="${i}" class="show_desc" onclick="show_hide_desc(${i})">mostrar descrição</a>
+        <input type="checkbox" id="check_task${i}" value="${i}">
+        <input type="button" value="delete" class="delete_button" onclick="delete_task(${i})">
+        <p>
+        <p id="p_desc${i}" class="desc">${tasks[i].desc}</p>
+        `
+        card.appendChild(card_info)
+        task_area.appendChild(card)
+    }
+    
+}
+
+function show_hide_desc(id) {
+    let p_desc = document.getElementById(`p_desc${id}`)
+    p_desc.syle.display = 'inline'
+
+}
+
+function hide_task() {
+    task_area.innerHTML = ''
+    hide_button.style.display = 'none'
+
+}
 
 
 const tasks = []
 const date = new Date()
-
+const task_area = document.getElementById('tasks')
+const hide_button = document.getElementById('hide_button')
