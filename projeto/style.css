@@ -40,6 +40,7 @@ div#tasks {
     overflow-x: auto;
     white-space: nowrap;
     gap:1rem;
+    position: relative;
 }
 
 #preview_area {
@@ -76,7 +77,7 @@ div#buttons {
     transition: background-color 0.3s ease, transform 0.2s ease;
 
 }
-.task_button:hover {
+.task_button:hover, #hide_button:hover {
     background-color: rgb(80, 113, 153);
     transform: scale(1.03)
 }
@@ -88,6 +89,7 @@ div#buttons {
     border-radius: 1rem;
     width: 4rem ;
     height: 25px;
+    border: none;
     border-color: red;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -95,9 +97,6 @@ div#buttons {
 
 .delete_button:hover {
     transform: scale(1.03)
-}
-#add_task_button {
-    display: none;
 }
 
 #input_task {
@@ -114,7 +113,6 @@ div#buttons {
 .card {
     display: flex;
     flex-direction: column;
-    width: auto;
     background-color: rgb(45, 45, 55);
     border: 1px solid rgb(175, 175, 175);
     border-radius: 1rem;
@@ -127,6 +125,7 @@ div#buttons {
     flex-direction: row;
     gap: 1rem;
     align-items: center;
+    width: auto;
 }
 
 textarea {
@@ -144,6 +143,21 @@ textarea {
 .show_desc {
     text-decoration: none;
     color: white;
+}
+
+#hide_button{
+    display: none;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 2rem;
+    background-color: #184bf5;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2 ease;
 }
 
 footer {

@@ -14,18 +14,20 @@
     </header>
     <main id="main">
         <div id="tasks">
-
+            <button id="hide_button" onclick="hide_tak()">Teste</button>
         </div>
         <div id="preview_area">
             <div id="buttons">
-                <input type="button" value="Adicionar tarefas" class="task_button" onclick="preview_task()">
+                <input type="button" value="Adicionar tarefas" class="task_button" onclick="input_task()">
                 <input type="button" value="Mostrar tarefas" class="task_button" onclick="show_task()">
                 <input type="button" value="Remover tarefas concluídas" class="task_button"
                     onclick="delete_complete_task()">
             </div>
             <div id="input_task">
                 <div id="add_input">
-
+                    <p>Digite o nome da tarefa: <input type="text" id="task_title"> Data de vencimento: <input
+                            type="date" id="task_date"></p><br>
+                    Digite a descrição da tarefa: <textarea name="task_desc" id="task_desc"></textarea>
                 </div>
                 <div id="add_button">
                     <input type="button" value="Adicionar" class="task_button" id="add_task_button"

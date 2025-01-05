@@ -17,11 +17,36 @@ class Task {
     }
 }
 
-function preview_task(){
+function input_task(){
     let input_area = document.getElementById('input_task')
-    input_area.innerHTML = 'teste'
     input_area.style.display = 'inline'
+    
 }
+
+function add_task() {
+    let task_title = document.getElementById('task_title').value
+    let task_desc = document.getElementById('task_desc').value
+    let task_date = document.getElementById('task_date').value
+
+    let verify = false
+
+    for (i in tasks){
+        if (tasks[i].title == task_title){
+            verify = true
+        }
+    }
+
+    if ( ! verify) {
+        let instance_task = new Task(task_title, task_desc, task_date)
+        tasks.push(instance_task)
+    } else {
+        window.alert('[ERRO] Essa tarefa já existe')
+    }
+    
+}
+
+
+
 const tasks = []
 const date = new Date()
 
