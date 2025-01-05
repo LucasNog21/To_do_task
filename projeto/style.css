@@ -10,47 +10,32 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    color:black;
-}
-
-#title {
-    margin: auto auto;
-}
-#cheader {
-    display: flex;
-    height: 4rem;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: center;
-    width: fit-content;
+    color:white;
 }
 
 header {
-    height: auto;
-    border: gray;
-    background-color:white;
+    border-bottom: 1px solid rgb(71, 71, 76);
+    background-color: rgb(13, 13, 20);
     width: 100%;
     text-align: center;
-    box-shadow: 0px 3px 10px -5px gray;
-
 }
 
 main {
     display: grid;
-    grid-template-rows: 18rem 1fr;
+    grid-template-rows: 2fr 1fr;
     grid-template-columns: 1fr ;
     grid-template-areas: 
         'tasks-area'
         'preview-area';
     height: 100%;
     width: 100%;
+    background-color: rgb(45, 45, 55);
 }
 
 div#tasks {
     grid-area: tasks-area;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 3px 10px -5px gray;
     padding:1rem;
     overflow-x: auto;
     white-space: nowrap;
@@ -58,9 +43,12 @@ div#tasks {
 }
 
 #preview_area {
+    grid-area: preview-area;
+    justify-self: center;
     display: flex;
     flex-direction: row;
-    background-color:rgba(234, 234, 234, 0.432);
+    width: 95%;
+    border-top: 1px solid rgb(175, 175, 175);
     gap: 1rem;
     padding: 1rem;
 }
@@ -68,41 +56,37 @@ div#buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    width: 20rem;
+    background-color: rgb(45, 45, 55);
+    border: 1px solid rgb(175, 175, 175);
     border-radius: 1rem;
-    box-shadow: 0px 5px 15px -5px gray;
-    padding: 3rem;
-    gap: 3rem
+    padding: 1rem;
+    gap: 1rem
 
 }
 
 .task_button{
     font-size: 1rem;
-    background-color: #100f28;
+    background-color: #184bf5;
     color: white;
     border-radius: 2rem;
-    width: auto;
     height: 3rem;
     padding:1rem;
     border: none;
-    box-shadow: 0px 3px 10px -5px gray;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 
 }
 .task_button:hover {
-    background-color: gray;
+    background-color: rgb(80, 113, 153);
     transform: scale(1.03)
 }
 
 .delete_button {
     font-size: 1rem;
-    background-color: white;
+    background-color: rgb(45, 45, 55);
     color: red;
     border-radius: 1rem;
-    width: auto ;
+    width: 4rem ;
     height: 25px;
     border-color: red;
     cursor: pointer;
@@ -120,10 +104,9 @@ div#buttons {
     display: none;
     flex-direction: column;
     text-align: center;
-    background-color: white;
-    width: auto;
+    background-color: rgb(45, 45, 55);
+    border: 1px solid rgb(175, 175, 175);
     border-radius: 1rem;
-    box-shadow: 0px 5px 15px -5px gray;
     padding: 1rem;
     gap:1rem
 }
@@ -131,11 +114,10 @@ div#buttons {
 .card {
     display: flex;
     flex-direction: column;
-    height:auto;
-    min-width: 50%;
-    width: auto;
-    box-shadow: 0px 5px 15px -5px gray;
-    background-color:rgba(234, 234, 234, 0.432);
+    width: 50%;
+    background-color: rgb(45, 45, 55);
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 1rem;
     gap:1rem;
     padding:1rem;
 }
@@ -149,7 +131,7 @@ div#buttons {
 
 textarea {
     width: 100%;
-    min-height: 10rem;
+    min-height: 3rem;
     resize: none;
     overflow: hidden;
 
@@ -159,10 +141,14 @@ textarea {
     display:none;
 }
 
+.show_desc {
+    text-decoration: none;
+    color: white;
+}
+
 footer {
     display: flex;
-    height: auto;
-    background-color: #100f28;
+    background-color: rgb(13, 13, 20);
     width:100%;
     justify-content: center;
     color: white;

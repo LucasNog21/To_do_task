@@ -40,7 +40,7 @@ function show_task() {
     <div class="card" id="${tasks_array[i].name}">
         <div id="card_info">
         <p><h1>${tasks_array[i].name}</h1>
-        <a href="#" id="${i}" onclick="show_hide_desc(${i})">mostrar descrição</a><input type="checkbox" id="check_task${i} value="${i}" "><input type="button" value="delete" class="delete_button" onclick ="delete_task(${i})"></p>
+        <a href="#" id="${i}" class="show_desc" onclick="show_hide_desc(${i})">mostrar descrição</a><input type="checkbox" id="check_task${i} value="${i}" "><input type="button" value="delete" class="delete_button" onclick ="delete_task(${i})"></p>
         </div>
         <p id="p_desc${i}" class="desc">${tasks_array[i].desc}</p> 
     </div>
