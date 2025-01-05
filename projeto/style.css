@@ -34,18 +34,12 @@ main {
 
 div#tasks {
     grid-area: tasks-area;
-    display: flex;
-    flex-direction: column;
-    padding:1rem;
-    overflow-x: auto;
+    overflow-y: auto;
     white-space: nowrap;
-    gap:1rem;
+    gap: 1rem;
+    padding: 3rem;
+    max-height: calc(100vh - 8rem);
 }
-
-div#tasks_area {
-    position: relative;
-}
-
 
 #preview_area {
     grid-area: preview-area;

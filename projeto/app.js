@@ -155,5 +155,5 @@ function delete_complete_task() {
 
 var tasks = []
 const date = new Date()
-const task_area = document.getElementById('tasks')
+const task_area = document.getElementById('tasks_area')
 const hide_button = document.getElementById('hide_button')
